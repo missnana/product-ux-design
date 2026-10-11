@@ -5,9 +5,9 @@ Portfolio of Nadine, Product & UX Designer. Plain static HTML/CSS/JS, no build s
 ## Structure
 - `index.html` – hero, selected work (4 case cards), about, contact
 - `work/<slug>.html` – one page per case study: `navigation`, `create-account`, `transaction`, `user-account`
-- `assets/style.css` – all styles; colors and fonts are tokens on `:root` (light) with dark overrides below
+- `assets/style.css` – all styles; colors and fonts are tokens on `:root`. The site is dark-only with a lilac accent (`--accent`) by the owner's choice; don't add a light theme unless asked
 - `assets/main.js` – copy-email button only
-- `CNAME` – custom domain for GitHub Pages
+- `CNAME` – custom domain for GitHub Pages, which serves `main` from the repo root. Pushing to `main` deploys live; DNS for nadineux.com is managed at Squarespace Domains
 - `404.html` – uses root-absolute paths on purpose
 
 ## Conventions

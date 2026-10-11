@@ -1,16 +1,18 @@
 /* Layout: one centered column on a Figma-like dotted canvas; sections are labelled like design frames, work sits in a 2-up grid */
+/* Deliberately dark-only: the owner chose the dark look with the lilac accent for every visitor */
 :root {
-  --bg: #eef0f3;
-  --dot: #d6dbe3;
-  --surface: #ffffff;
-  --surface-2: #e3e7ee;
-  --ink: #14161b;
-  --muted: #59606c;
-  --line: #d3d8e0;
-  --accent: #2e55f5;
-  --accent-soft: #dce3ff;
-  --on-accent: #ffffff;
-  --shadow: rgb(20 22 27 / 0.28);
+  --bg: #101216;
+  --dot: #22262e;
+  --surface: #181b21;
+  --surface-2: #232730;
+  --ink: #eceef2;
+  --muted: #9aa1ae;
+  --line: #2b3039;
+  --accent: #7f97ff;
+  --accent-soft: #1f2748;
+  --on-accent: #0b0d12;
+  --shadow: rgb(0 0 0 / 0.6);
+  color-scheme: dark;
 
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --font-body: "Instrument Sans", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
@@ -27,38 +29,6 @@
   --wrap: 1120px;
   --gutter: clamp(16px, 4vw, 40px);
   --spring: cubic-bezier(0.3, 0.7, 0.4, 1.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #101216;
-    --dot: #22262e;
-    --surface: #181b21;
-    --surface-2: #232730;
-    --ink: #eceef2;
-    --muted: #9aa1ae;
-    --line: #2b3039;
-    --accent: #7f97ff;
-    --accent-soft: #1f2748;
-    --on-accent: #0b0d12;
-    --shadow: rgb(0 0 0 / 0.6);
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #101216;
-  --dot: #22262e;
-  --surface: #181b21;
-  --surface-2: #232730;
-  --ink: #eceef2;
-  --muted: #9aa1ae;
-  --line: #2b3039;
-  --accent: #7f97ff;
-  --accent-soft: #1f2748;
-  --on-accent: #0b0d12;
-  --shadow: rgb(0 0 0 / 0.6);
-  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
