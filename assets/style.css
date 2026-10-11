@@ -321,8 +321,10 @@ p { margin: 0; }
 .duo { position: relative; isolation: isolate; background: var(--bg); }
 .duo img { filter: grayscale(1) contrast(1.12) brightness(1.12); transition: filter 700ms ease; }
 .duo::after { content: ""; position: absolute; inset: 0; background: var(--duo); mix-blend-mode: multiply; transition: opacity 700ms ease; pointer-events: none; }
-.duo:hover img { filter: none; }
-.duo:hover::after { opacity: 0; }
+.portrait .duo img { filter: grayscale(0.55) contrast(1.08) brightness(1.08); }
+.portrait .duo::after { opacity: 0.75; }
+.duo:hover img, .portrait .duo:hover img { filter: none; }
+.duo:hover::after, .portrait .duo:hover::after { opacity: 0; }
 .portrait:hover .shape { transform: rotate(8deg); }
 .portrait:hover .shape img { transform: rotate(-8deg) scale(1.1); }
 .shape img { transition: transform 700ms var(--spring), filter 700ms ease; }
