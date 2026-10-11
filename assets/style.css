@@ -333,6 +333,9 @@ p { margin: 0; }
 .facts dd { margin: 4px 0 0; font-weight: 500; }
 
 /* Contact */
+.contact-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.contact-photo img { width: 100%; height: auto; aspect-ratio: 640 / 854; object-fit: cover; border-radius: var(--radius); transition: transform 420ms var(--spring); }
+.contact-photo:hover img { transform: rotate(-1.5deg) translateY(-6px); }
 .contact { display: grid; gap: 28px; justify-items: start; }
 .contact h2 { font-size: var(--step-4); letter-spacing: -0.045em; line-height: 0.98; }
 .contact p { color: var(--muted); font-size: var(--step-1); max-width: 40ch; }
@@ -408,7 +411,8 @@ p { margin: 0; }
 
 @media (max-width: 860px) {
   .work-grid, .about { grid-template-columns: minmax(0, 1fr); }
-  .impact-layout { grid-template-columns: minmax(0, 1fr); }
+  .impact-layout, .contact-layout { grid-template-columns: minmax(0, 1fr); }
+  .contact-photo { max-width: 320px; }
   .impact-lead { position: static; }
   .portrait { max-width: 360px; }
   .story { grid-template-columns: minmax(0, 1fr); }
