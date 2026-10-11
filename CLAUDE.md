@@ -7,7 +7,7 @@ Portfolio of Nadine, Product & UX Designer. Plain static HTML/CSS/JS, no build s
 - `work/<slug>.html` – one page per case study: `shop-groups` (Pixum shop group + product page restructure, navigation was step one), `transaction` (transactional emails), `membership-cancellation` (reCup, no data exists, so results are qualitative), `design-systems` (no data; currently building a multi-brand system from scratch at DYN with AI; Figma design systems since 2018). Content comes from the owner's earlier Squarespace portfolio (German); the site renders it in English
 - `assets/style.css` – all styles; colors and fonts are tokens on `:root`. The site is dark-only with a lilac accent (`--accent`) by the owner's choice; don't add a light theme unless asked
 - `assets/main.js` – copy-email button only
-- `assets/img/` – WebP images. `portrait.webp` (About, Figma logo at Config) and `contact.webp` (Contact). Re-encode photos before adding them so EXIF/GPS data is stripped
+- `assets/img/` – WebP images. `portrait.webp` (About, Figma logo at Config) and `contact.webp` (Contact). Re-encode photos before adding them so EXIF/GPS data is stripped. Photos sit in `.shape` masks (`shape-flower`, `shape-clover`, echoing the old site) with a lilac `.duo` duotone that fades to colour on hover
 - `CNAME` – custom domain for GitHub Pages, which serves `main` from the repo root. Pushing to `main` deploys live; DNS for nadineux.com is managed at Squarespace Domains
 - `404.html` – uses root-absolute paths on purpose
 
