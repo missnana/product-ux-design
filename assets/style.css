@@ -198,6 +198,7 @@ p { margin: 0; }
 .ledger li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 24px; align-items: baseline; padding-block: 22px; border-bottom: 1px solid var(--line); }
 .ledger .v { font: 600 var(--step-2) / 1 var(--font-display); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap; transition: color 160ms ease; }
 .ledger li:hover .v { color: var(--accent); }
+.ledger .unit { display: block; margin-top: 8px; font: 400 var(--step--1) / 1.35 var(--font-mono); color: var(--muted); letter-spacing: 0; white-space: normal; }
 .ledger .what { font-weight: 500; font-size: 1.0625rem; }
 .ledger .how { display: block; margin-top: 4px; color: var(--muted); font-size: 0.9375rem; font-weight: 400; }
 
