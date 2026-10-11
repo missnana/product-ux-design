@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Design Systems · Soft Interactions</title>
+  <meta name="description" content="Design Systems case study by Nadine: the situation, what I did, and the result.">
+  <meta property="og:title" content="Design systems &amp; developer collaboration · Nadine, Product &amp; UX Designer">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nadineux.com/work/design-systems.html">
+  <meta name="theme-color" content="#101216">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html" aria-label="Nadine UX, home">nadine<span>ux</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cs-hero wrap">
+      <a class="back" href="../index.html#work">← All work</a>
+      <span class="frame-label">Case study · Design Systems</span>
+      <h1>Design systems &amp; developer collaboration</h1>
+      <p class="lede">One shared foundation for design and engineering, instead of building the same element again in every variant. You only succeed together.</p>
+      <dl class="meta">
+        <div><dt>Scope</dt><dd>Several companies, from start-up to in-house</dd></div>
+        <div><dt>Method</dt><dd>Atomic Design</dd></div>
+        <div><dt>Tools</dt><dd>Figma, GitHub, Storybook</dd></div>
+        <div><dt>Team</dt><dd>Design &amp; engineering</dd></div>
+      </dl>
+    </section>
+
+    <section class="wrap" aria-label="Results">
+      <div class="case-visual cs-visual" aria-hidden="true">
+        <div class="sheet">
+          <div class="swatches"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="sheet-row"><span class="pill"></span><span class="pill soft"></span><span class="pill ghost"></span></div>
+          <div class="field"></div>
+          <div class="field focus"></div>
+          <div class="sheet-row"><span class="chip"></span><span class="chip"></span><span class="chip"></span><span class="tg on"></span></div>
+        </div>
+      </div>
+      <div class="results">
+        <div class="result"><strong><span class="todo">−00 %</span></strong><span><span class="todo">e.g. dev time per new screen or feature</span></span></div>
+        <div class="result"><strong><span class="todo">00</span></strong><span><span class="todo">e.g. components shared by design and code</span></span></div>
+        <div class="result"><strong><span class="todo">00</span></strong><span><span class="todo">e.g. products or teams on the system</span></span></div>
+      </div>
+    </section>
+
+    <article class="wrap">
+      <section class="story">
+        <div class="story-label">
+          <span class="mono">01 · Situation</span>
+          <h2>What happened</h2>
+        </div>
+        <div class="story-body">
+          <p>Every company I worked with started from the same place: an inconsistent look across products, layouts that weren't fully responsive, and engineers building the same element again and again in slightly different colours and variants. Nothing scaled as requirements grew.</p>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="story-label">
+          <span class="mono">02 · Approach</span>
+          <h2>What I did</h2>
+        </div>
+        <div class="story-body">
+          <p>I built design systems together with engineering, as the base for efficient development and a clean, consistent brand across the whole company.</p>
+          <ul class="decisions">
+            <li><strong>Start from what's really there</strong><span>We broke every existing design down into atoms, components and templates, following Atomic Design, before adding anything new.</span></li>
+            <li><strong>Build the foundation with engineering</strong><span>Design and development agreed on the system together, so components in Figma match components in code and Storybook.</span></li>
+            <li><strong>Own the system, improve it step by step</strong><span>Instead of bending a framework like Bootstrap to fit the brand, we built our own system for our business needs and refined it iteratively. Even accessibility can be added later when the structure is sound.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="story-label">
+          <span class="mono">03 · Result</span>
+          <h2>What it changed</h2>
+        </div>
+        <div class="story-body">
+          <p>The design systems I built made it simpler and more efficient for everyone to implement designs. Design changes, for example from marketing, can be rolled out quickly and consistently. And it doesn't take forever: a focused start and at least one engineer who loves design are enough to get going.</p>
+        </div>
+      </section>
+
+      <figure class="quote">
+        <p>It takes at least one engineer who has an eye for detail and loves design. Otherwise it won't work.</p>
+        <figcaption class="mono">What I took away</figcaption>
+      </figure>
+
+      <a class="next-case" href="navigation.html">
+        <div>
+          <span class="frame-label">Next case · Navigation</span>
+          <h2>Intuitive navigation &amp; user guidance</h2>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Nadine · Made with love in Aachen</span>
+      <ul>
+        <li><a href="#" class="todo">LinkedIn</a></li>
+        <li><a href="mailto:nadine.westmann@hotmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
