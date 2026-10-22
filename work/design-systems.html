@@ -44,13 +44,37 @@
     </section>
 
     <section class="wrap" aria-label="Results">
-      <div class="case-visual cs-visual" aria-hidden="true">
-        <div class="sheet">
-          <div class="swatches"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="sheet-row"><span class="pill"></span><span class="pill soft"></span><span class="pill ghost"></span></div>
-          <div class="field"></div>
-          <div class="field focus"></div>
-          <div class="sheet-row"><span class="chip"></span><span class="chip"></span><span class="chip"></span><span class="tg on"></span></div>
+      <div class="case-visual cs-visual ds-visual">
+        <div class="ds-demo">
+          <div class="ds-side">
+            <fieldset class="ds-group">
+              <legend class="mono">Brand</legend>
+              <label><input type="radio" name="ds-brand" id="ds-brand-a" checked>Brand A</label>
+              <label><input type="radio" name="ds-brand" id="ds-brand-b">Brand B</label>
+              <label><input type="radio" name="ds-brand" id="ds-brand-c">Brand C</label>
+            </fieldset>
+            <fieldset class="ds-group">
+              <legend class="mono">Sport mode</legend>
+              <label><input type="radio" name="ds-mode" id="ds-mode-default" checked>Default</label>
+              <label><input type="radio" name="ds-mode" id="ds-mode-football">Football</label>
+              <label><input type="radio" name="ds-mode" id="ds-mode-handball">Handball</label>
+              <label><input type="radio" name="ds-mode" id="ds-mode-hockey">Ice hockey</label>
+            </fieldset>
+            <dl class="ds-tokens">
+              <div><dt>color.primary</dt><dd class="t-p"></dd></div>
+              <div><dt>color.mode</dt><dd class="t-m"></dd></div>
+              <div><dt>radius.card</dt><dd class="t-r"></dd></div>
+            </dl>
+          </div>
+          <div class="ds-stage">
+            <div class="ds-card" aria-hidden="true">
+              <div class="ds-card-top"><span class="ds-tag"></span><span class="ds-live">Live</span></div>
+              <div class="ds-teams"><span>Home</span><strong>2 : 1</strong><span>Away</span></div>
+              <div class="ds-bar"><span></span></div>
+              <span class="ds-btn">Watch live</span>
+            </div>
+            <p class="ds-note mono">Illustration of the principle, not DYN's actual design</p>
+          </div>
         </div>
       </div>
       <div class="results">

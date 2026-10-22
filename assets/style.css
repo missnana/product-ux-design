@@ -415,6 +415,85 @@ p { margin: 0; }
 .next-case .arrow { font-size: var(--step-3); color: var(--accent); transition: transform 260ms var(--spring); }
 .next-case:hover .arrow { transform: translateX(6px); }
 
+/* Design system playground: brands and sport modes as token sets, switched with radios (no JS, works in the modal) */
+.cs-visual.ds-visual { aspect-ratio: auto; display: block; padding: clamp(20px, 4vw, 48px); }
+.ds-demo {
+  --p: #7f97ff; --p-ink: #0b0d12; --p-label: "#7F97FF";
+  --r: 14px; --r-label: "14px";
+  --card: #1a1e27;
+  --m: var(--p); --m-label: "= primary"; --league: "Matchday 12";
+  --pattern: none;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.ds-demo:has(#ds-brand-b:checked) { --p: #ffb547; --p-ink: #1a1203; --p-label: "#FFB547"; --r: 4px; --r-label: "4px"; --card: #1f1c17; }
+.ds-demo:has(#ds-brand-c:checked) { --p: #4fd1a5; --p-ink: #04140e; --p-label: "#4FD1A5"; --r: 26px; --r-label: "26px"; --card: #152019; }
+.ds-demo:has(#ds-mode-football:checked) { --m: #3ccf6e; --m-label: "#3CCF6E"; --league: "Football"; --pattern: repeating-linear-gradient(90deg, rgb(60 207 110 / 0.06) 0 22px, transparent 22px 44px); }
+.ds-demo:has(#ds-mode-handball:checked) { --m: #ff7a45; --m-label: "#FF7A45"; --league: "Handball"; --pattern: radial-gradient(rgb(255 122 69 / 0.18) 1.2px, transparent 1.6px) 0 0 / 14px 14px; }
+.ds-demo:has(#ds-mode-hockey:checked) { --m: #8fd3ff; --m-label: "#8FD3FF"; --league: "Ice hockey"; --pattern: linear-gradient(90deg, transparent calc(50% - 1px), rgb(143 211 255 / 0.3) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)), radial-gradient(circle at 50% 50%, transparent 36px, rgb(143 211 255 / 0.3) 36px 38px, transparent 38px); }
+
+.ds-side { display: grid; gap: 20px; min-width: 0; }
+.ds-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.ds-group legend { width: 100%; margin-bottom: 8px; padding: 0; color: var(--muted); }
+.ds-group label {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 220ms var(--spring);
+}
+.ds-group label:hover { transform: translateY(-1px); }
+.ds-group label:active { transform: scale(0.96); }
+.ds-group input { position: absolute; opacity: 0; pointer-events: none; }
+.ds-group label:has(input:checked) { background: var(--ink); color: var(--bg); box-shadow: none; }
+.ds-group label:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ds-tokens { display: grid; gap: 6px; margin: 4px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: var(--step--1); }
+.ds-tokens div { display: flex; justify-content: space-between; gap: 12px; }
+.ds-tokens dt { color: var(--muted); }
+.ds-tokens dd { margin: 0; display: flex; align-items: center; gap: 8px; }
+.ds-tokens dd::before { content: ""; width: 12px; height: 12px; border-radius: 3px; }
+.ds-tokens .t-p::before { background: var(--p); }
+.ds-tokens .t-m::before { background: var(--m); }
+.ds-tokens .t-r::before { border: 2px solid var(--ink); border-radius: min(var(--r), 6px) 3px 3px 3px; width: 10px; height: 10px; }
+.ds-tokens .t-p::after { content: var(--p-label); }
+.ds-tokens .t-m::after { content: var(--m-label); }
+.ds-tokens .t-r::after { content: var(--r-label); }
+
+.ds-stage { display: grid; gap: 12px; justify-items: center; min-width: 0; }
+.ds-card {
+  width: min(100%, 340px);
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border-radius: var(--r);
+  background: var(--pattern), var(--card);
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.7), inset 0 0 0 1px rgb(255 255 255 / 0.06);
+  color: #f2f3f6;
+  transition: border-radius 420ms var(--spring), background-color 300ms ease;
+}
+.ds-card-top { display: flex; justify-content: space-between; align-items: center; }
+.ds-tag { padding: 4px 10px; border-radius: calc(var(--r) / 2); background: color-mix(in srgb, var(--m) 18%, transparent); color: var(--m); font: 500 0.8125rem / 1.2 var(--font-mono); transition: color 300ms ease, background 300ms ease, border-radius 420ms var(--spring); }
+.ds-tag::before { content: var(--league); }
+.ds-live { display: inline-flex; align-items: center; gap: 6px; font: 600 0.75rem / 1 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; }
+.ds-live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #ff4d5e; box-shadow: 0 0 0 4px rgb(255 77 94 / 0.2); }
+.ds-teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; font-weight: 500; }
+.ds-teams span:last-child { text-align: right; }
+.ds-teams strong { font: 600 2rem / 1 var(--font-display); letter-spacing: -0.02em; }
+.ds-bar { height: 6px; border-radius: 99px; background: rgb(255 255 255 / 0.1); overflow: hidden; }
+.ds-bar span { display: block; width: 62%; height: 100%; border-radius: inherit; background: var(--m); transition: background 300ms ease; }
+.ds-btn { justify-self: start; padding: 11px 18px; border-radius: var(--r); background: var(--p); color: var(--p-ink); font-weight: 600; transition: background 300ms ease, color 300ms ease, border-radius 420ms var(--spring); }
+.ds-note { color: var(--muted); text-align: center; }
+
+@media (max-width: 860px) {
+  .ds-demo { grid-template-columns: minmax(0, 1fr); }
+  .ds-stage { order: -1; }
+}
+
 /* Case study modal: a sheet that slides up over the home page */
 html.modal-open { overflow: hidden; }
 .case-modal {
