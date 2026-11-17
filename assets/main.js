@@ -12,11 +12,12 @@ document.querySelectorAll("[data-copy]").forEach((btn) => {
 });
 
 // Case studies open in a modal sheet; the work/*.html pages stay real pages for direct links and search.
-const caseSlugs = new Set(
-  [...document.querySelectorAll("a.case")]
+const caseSlugs = new Set([
+  "shop-groups", "my-pixum", "recup-platform", "design-systems",
+  ...[...document.querySelectorAll("a.case")]
     .map((a) => a.getAttribute("href").match(/^work\/([\w-]+)\.html$/)?.[1])
-    .filter(Boolean)
-);
+    .filter(Boolean),
+]);
 const baseTitle = document.title;
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let dialog, sheet, body, current = null, opener = null;
@@ -118,6 +119,12 @@ document.addEventListener("click", (e) => {
   openCase(slug);
 });
 
+window.showCase = (slug, trigger) => {
+  if (!caseSlugs.has(slug)) return;
+  opener = trigger || document.activeElement;
+  openCase(slug);
+};
+
 window.addEventListener("popstate", () => {
   const slug = location.hash.slice(1);
   if (caseSlugs.has(slug)) openCase(slug, false);
@@ -127,6 +134,6 @@ window.addEventListener("popstate", () => {
 const initial = location.hash.slice(1);
 if (caseSlugs.has(initial)) {
   history.replaceState(null, "", location.pathname + location.search);
-  opener = document.querySelector(`a.case[href="work/${initial}.html"]`);
+  opener = document.querySelector(`a.case[href="work/${initial}.html"]`) || document.activeElement;
   openCase(initial);
 }
